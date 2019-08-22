@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+
+<listeners>
+       <listener class-name="OodlesDB.listeners"/>
+       <listener class-name="resource.ExtentReporterNG"/>
+  </listeners>
+  
+  
+  <listeners>
+       <listener class-name="resource.MyTransformer"/>
+  </listeners>
+  
+   <test name="Sales lead">
+    <classes>
+     
+      <class name="OodlesDB.Salestest"/>
+      
+    </classes>
+      </test>
+     
+     <test name="validatetitle">
+      <classes>
+      <class name="OodlesDB.validatetitle"/>
+       </classes>
+      </test>
+      
+    <!--  <test name="Project module">
+   
+    <groups>
+    <run>
+    <exclude name="smoke"/>
+    </run>
+    </groups>
+    
+    <classes>
+      <class name="OodlesDB.ProjectTest">
+      
+      <methods>
+      <include name="verifyaddproject"/>
+      </methods>
+      
+      </class>
+    </classes>
+      </test>
+      
+      -->
+      
+      
+      
+  <!-- Test -->
+</suite> <!-- Suite -->
+        
+      
