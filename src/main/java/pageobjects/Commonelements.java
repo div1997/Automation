@@ -1,5 +1,6 @@
 package pageobjects;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -66,9 +67,13 @@ public abstract class Commonelements {
 	@FindBy (id="sidebar")
 	WebElement chaticon;
 	
+	
+	
 	@FindBy (xpath="//a[@class='logo']")
 	WebElement logo;
-
+ 
+	@FindBy (xpath= "//a[@id='1']")
+	WebElement policy;
 	
 	 public void verifyLogo()
 	    {
@@ -151,8 +156,19 @@ public WebElement supervisoremail()
 public WebElement clickonchaticon()
 {
 	
-	return chaticon;
 	
+	JavascriptExecutor js1= ((JavascriptExecutor)driver);
+	System.out.print(js1);
+	js1.executeScript("arguments[0]", chaticon);
+	return chaticon;
+
+	
+}
+
+public WebElement clickonPolicy()
+{
+	
+	return policy;
 }
 
 }

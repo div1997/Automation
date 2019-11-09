@@ -43,11 +43,11 @@ public class Baseclass {
 		
 	}
 	else if (browsername.equals("firefox")){
-		System.setProperty("webdriver.gecko.driver","/home/vivek/Downloads/geckodriver");
+		System.setProperty("webdriver.gecko.driver","//home//divya//Desktop//data//geckodriver");
 		driver = new FirefoxDriver();
 	}
 	//driver.manage().deleteAllCookies();
-	driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+	driver.manage().timeouts().implicitlyWait(50,TimeUnit.SECONDS);
 	driver.manage().window().maximize();
 				
 	
@@ -62,7 +62,7 @@ public class Baseclass {
 		File src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);    //driver must implement the TakesScreenshot interface  so as to use getscreenshot method 
 				                                                                //.thus Convert web driver object to TakeScreenshot
 		
-			FileUtils.copyDirectory(src, new File("/home/vivek/Shotfolder/"+result+"screenshot.png"));
+			FileUtils.copyDirectory(src, new File("./ODB-master/src"+result+"screenshot.png"));
 	
 		
 		

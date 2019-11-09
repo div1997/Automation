@@ -28,9 +28,9 @@ public class ChatTest extends Baseclass
 		Landingpage lp=new Landingpage(driver);
 		lp.login();
 		
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		ChatPage cp= new ChatPage(driver);
-		cp.Feedback().click();
+	
 		cp.clickonchaticon().click();
 		cp.sendvalidchat();
 		

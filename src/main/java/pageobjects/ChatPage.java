@@ -12,8 +12,6 @@ public class ChatPage extends Commonelements {
 
 	public WebDriver driver;
 	
-	@FindBy(id="sidebar")
-	WebElement Feedback;
 	
 	
 	@FindBy(xpath="//select[@id='select_options']")
@@ -33,10 +31,7 @@ public class ChatPage extends Commonelements {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
-	public WebElement Feedback()
-	{
-		return Feedback;
-	}
+	
 	
 	public WebElement Issue()
 	{

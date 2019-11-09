@@ -2,38 +2,42 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="157724" started-at="2019-08-21T20:14:04Z" finished-at="2019-08-21T20:16:42Z">
+  <suite name="Default suite" duration-ms="90085" started-at="2019-11-09T10:10:13Z" finished-at="2019-11-09T10:11:43Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="157724" started-at="2019-08-21T20:14:04Z" finished-at="2019-08-21T20:16:42Z">
-      <class name="OodlesDB.ChatTest">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:OodlesDB.ChatTest@4b9e13df]" name="initialize" is-config="true" duration-ms="13712" started-at="2019-08-22T01:44:04Z" finished-at="2019-08-22T01:44:18Z">
+    <test name="Default test" duration-ms="90085" started-at="2019-11-09T10:10:13Z" finished-at="2019-11-09T10:11:43Z">
+      <class name="OodlesDB.Blogtestcase">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:OodlesDB.Blogtestcase@59fd97a8]" name="initialize" is-config="true" duration-ms="37258" started-at="2019-11-09T15:40:13Z" finished-at="2019-11-09T15:40:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="FAIL" signature="verifyValidChat()[pri:0, instance:OodlesDB.ChatTest@4b9e13df]" name="verifyValidChat" duration-ms="143955" started-at="2019-08-22T01:44:18Z" finished-at="2019-08-22T01:46:42Z">
-          <exception class="org.openqa.selenium.WebDriverException">
+        <test-method status="FAIL" signature="writeblog()[pri:0, instance:OodlesDB.Blogtestcase@59fd97a8]" name="writeblog" duration-ms="52803" started-at="2019-11-09T15:40:51Z" finished-at="2019-11-09T15:41:43Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[unknown error: Element <button class="btn btn-primary" onclick="open_panel()" id="sidebar" style="padding: 10px 16px;font-size: 20px;border-radius: 6px;">...</button> is not clickable at point (1281, 568). Other element would receive the click: <div class="col-md-6">...</div>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//input[@class='form-control ng-pristine ng-invalid ng-touched']"}
   (Session info: chrome=72.0.3626.96)
-  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Linux 4.4.0-159-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Linux 4.4.0-166-generic x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.5', revision: 'd54ebd709a', time: '2018-11-06T11:42:16'
-System info: host: 'Divya.Varnwal', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-159-generic', java.version: '1.8.0_222'
+System info: host: 'Divya.Varnwal', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-166-generic', java.version: '1.8.0_222'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: /tmp/.org.chromium.Chromium...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 72.0.3626.96, webStorageEnabled: true}
-Session ID: c059dac4879cc31d60c535173eb4f7b0]]>
+Session ID: 8fae016f0a77c35c3c5f3ba6d871f956
+*** Element info: {Using=xpath, value=//input[@class='form-control ng-pristine ng-invalid ng-touched']}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: Element <button class="btn btn-primary" onclick="open_panel()" id="sidebar" style="padding: 10px 16px;font-size: 20px;border-radius: 6px;">...</button> is not clickable at point (1281, 568). Other element would receive the click: <div class="col-md-6">...</div>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@class='form-control ng-pristine ng-invalid ng-touched']"}
   (Session info: chrome=72.0.3626.96)
-  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Linux 4.4.0-159-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Linux 4.4.0-166-generic x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.5', revision: 'd54ebd709a', time: '2018-11-06T11:42:16'
-System info: host: 'Divya.Varnwal', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-159-generic', java.version: '1.8.0_222'
+System info: host: 'Divya.Varnwal', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-166-generic', java.version: '1.8.0_222'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: /tmp/.org.chromium.Chromium...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 72.0.3626.96, webStorageEnabled: true}
-Session ID: c059dac4879cc31d60c535173eb4f7b0
+Session ID: 8fae016f0a77c35c3c5f3ba6d871f956
+*** Element info: {Using=xpath, value=//input[@class='form-control ng-pristine ng-invalid ng-touched']}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -46,15 +50,14 @@ Session ID: c059dac4879cc31d60c535173eb4f7b0
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy8.click(Unknown Source)
-	at OodlesDB.ChatTest.verifyValidChat(ChatTest.java:33)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy25.sendKeys(Unknown Source)
+	at OodlesDB.Blogtestcase.writeblog(Blogtestcase.java:68)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -81,11 +84,11 @@ Session ID: c059dac4879cc31d60c535173eb4f7b0
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyValidChat -->
-      </class> <!-- OodlesDB.ChatTest -->
+        </test-method> <!-- writeblog -->
+      </class> <!-- OodlesDB.Blogtestcase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

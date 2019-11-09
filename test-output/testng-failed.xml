@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="OodlesDB.ChatTest">
+      <class name="OodlesDB.Blogtestcase">
         <methods>
-          <include name="verifyValidChat"/>
+          <include name="writeblog"/>
           <include name="initialize"/>
         </methods>
-      </class> <!-- OodlesDB.ChatTest -->
+      </class> <!-- OodlesDB.Blogtestcase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
