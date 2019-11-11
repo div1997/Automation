@@ -39,6 +39,16 @@ public class Policy {
 		@FindBy(css="#myModal1 > div > div > div.modal-body > form > div.modal-footer > button:nth-child(1)")
 		WebElement savepolicydocument;
 		//button[@class='btn btn-primary button-color customBtnCss']//parent::div//child::button[1]
+		@FindBy(xpath="//input[contains(@placeholder,'Search')]")
+		WebElement search;
+		@FindBy(xpath="//span[@class='fas fa-pencil-alt icon-color']")
+		WebElement editdoc;
+		@FindBy(xpath="//input[@id='exampleFormControlFile1']")
+		WebElement updatedoc;
+		@FindBy(xpath="//button[@class='btn btn-primary btn-section']")
+		WebElement saveupdate;
+		@FindBy(xpath="//option[@value='10']//parent::select")
+		WebElement showperpagefilter;
 		public WebElement Others()
 		{
 			return Others;
@@ -81,5 +91,25 @@ public WebElement uploadfile()
 public WebElement savedoc()
 {
 	return savepolicydocument;
+}
+public WebElement search()
+{
+	return search;
+}
+public WebElement edit()
+{
+	return editdoc;
+}
+public WebElement update()
+{
+	return updatedoc;
+}
+public WebElement saveupdate()
+{
+	return saveupdate;
+}
+public WebElement showperpage()
+{
+	return showperpagefilter;
 }
 }
