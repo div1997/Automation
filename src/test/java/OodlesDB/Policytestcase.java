@@ -28,23 +28,50 @@ public class Policytestcase extends Baseclass
 		driver.get(prop.getProperty("url"));
 		
 		}
+		
+		@Test
+		public void login() throws InterruptedException
+		{
+			Landingpage lp=new Landingpage(driver);
+			lp.login();
+			log.info("Login successfully");
+			Thread.sleep(2000);
+			WaitStattementLib.iWaitForSecs(driver, 20);
+		}
+		
+		@Test(enabled=true,dependsOnMethods={"login"})
+		public void showperpagefilter() throws InterruptedException
+		{
+			
+			Thread.sleep(2000);
+			WaitStattementLib.iWaitForSecs(driver, 20);
+			Policy pd = new Policy(driver);
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].click()", pd.Others());
+			js.executeScript("arguments[0].click()", pd.policy());
+			Select option = new Select(pd.showperpage());
+			option.selectByVisibleText("Show 25 per page");
+			log.info("applied filter on show per page");
+			Assert.assertEquals("Show 25 per page", "Show 25 per page");
+		}
 	
-	@Test(enabled=false)
+	@Test(enabled=true,dependsOnMethods={"showperpagefilter"})
 	public void addPolicy() throws InterruptedException
 	
 	{
 	
-		Landingpage lp=new Landingpage(driver);
-		lp.login();
-		log.info("Login successfully");
-		//Thread.sleep(2000);
-		WaitStattementLib.iWaitForSecs(driver, 20);
+//		Landingpage lp=new Landingpage(driver);
+//		lp.login();
+//		log.info("Login successfully");
+//		//Thread.sleep(2000);
+//		WaitStattementLib.iWaitForSecs(driver, 20);
 		Policy pd = new Policy(driver);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click()", pd.Others());
-		log.info("Click on other tab");
-		js.executeScript("arguments[0].click()", pd.policy());
-		log.info("Click on policy");
+//		js.executeScript("arguments[0].click()", pd.Others());
+//		log.info("Click on other tab");
+//		js.executeScript("arguments[0].click()", pd.policy());
+//		log.info("Click on policy");
+		Thread.sleep(2000);
 		pd.typeButton().click();
 		log.info("Click on add policy type button");
 		pd.addtype().sendKeys("HR_Leavedoc55");
@@ -52,12 +79,12 @@ public class Policytestcase extends Baseclass
 		pd.savetype().click();
 		log.info("save policy type");
 		
-		//Thread.sleep(1000);
+		Thread.sleep(1000);
 		WaitStattementLib.iWaitForSecs(driver, 10);
 		pd.adddocument().click();
-		log.info("Click on ad policy document");
+		log.info("Click on add policy document");
 		Select option = new Select(pd.typedropdown());
-		option.selectByVisibleText("HR Manual");
+		option.selectByVisibleText("HR_Leavedoc55");
 		log.info("option selected");
 		pd.uploadfile().sendKeys("/home/divya/Pictures/Screenshot from 2019-06-27 18-13-24.png");
 		//Thread.sleep(1000);
@@ -69,20 +96,20 @@ public class Policytestcase extends Baseclass
 	
 	}
 	
-	@Test(enabled=false)
+	@Test(enabled=true,dependsOnMethods={"showperpagefilter"})
 	public void editpolicydoc() throws InterruptedException
 	{
-		Landingpage lp=new Landingpage(driver);
-		lp.login();
+//		Landingpage lp=new Landingpage(driver);
+//		lp.login();
 		//Thread.sleep(2000);
 		WaitStattementLib.iWaitForSecs(driver, 20);
-		Policy pd = new Policy(driver);
+     	Policy pd = new Policy(driver);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click()", pd.Others());
-		js.executeScript("arguments[0].click()", pd.policy());
-		//Thread.sleep(2000);
-		WaitStattementLib.iWaitForSecs(driver, 20);
-		pd.search().sendKeys("HR Manual");
+//		js.executeScript("arguments[0].click()", pd.Others());
+//		js.executeScript("arguments[0].click()", pd.policy());
+		Thread.sleep(2000);
+//		WaitStattementLib.iWaitForSecs(driver, 20);
+		pd.search().sendKeys("HR_Leavedoc55");
 		Thread.sleep(2000);
 		log.info("applied serach filter");
 		pd.edit().click();
@@ -96,78 +123,64 @@ public class Policytestcase extends Baseclass
 		Thread.sleep(2000);
 		//WaitStattementLib.iWaitForSecs(driver, 50);
 		driver.navigate().refresh();
-		pd.search().sendKeys("HR Manual");
+		pd.search().sendKeys("HR_Leavedoc55");
 		Thread.sleep(2000);
 	String filename= "ELK_image.png";
 	String updatefilename= pd.filename().getText();
 	Assert.assertEquals(filename,updatefilename);
 	log.info("File updated successfully");
 	}
-	@Test(enabled=false)
-	public void showperpagefilter() throws InterruptedException
-	{
-		Landingpage lp=new Landingpage(driver);
-		lp.login();
-		//Thread.sleep(2000);
-		WaitStattementLib.iWaitForSecs(driver, 20);
-		Policy pd = new Policy(driver);
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click()", pd.Others());
-		js.executeScript("arguments[0].click()", pd.policy());
-		Select option = new Select(pd.showperpage());
-		option.selectByVisibleText("Show 25 per page");
-		log.info("applied filter on show per page");
-	}
+	
 	@Test(priority=1,enabled=false)
 	public void clickOnpagination_1() throws InterruptedException
 	{
-		Landingpage lp =new Landingpage(driver);
-		lp.login();
-		Thread.sleep(2000);
-		log.info("login successfully");
+//		Landingpage lp =new Landingpage(driver);
+//		lp.login();
+//		Thread.sleep(2000);
+//		log.info("login successfully");
 		//WaitStattementLib.iWaitForSecs(driver, 20);
 		Policy pd = new Policy(driver);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click()", pd.Others());
-		log.info("click on Others tab");
-		js.executeScript("arguments[0].click()", pd.policy());
-		log.info("click on policy tab");
+//		js.executeScript("arguments[0].click()", pd.Others());
+//		log.info("click on Others tab");
+//		js.executeScript("arguments[0].click()", pd.policy());
+//		log.info("click on policy tab");
 		js.executeScript("window.scrollBy(0,1000)");
 		pd.pagination_1();
 		
 	}
-	@Test(priority=2,enabled=true)
+	@Test(priority=2,enabled=false,dependsOnMethods={"clickOnpagination_1"})
 	public void clickOnpagination_2() throws InterruptedException
 	{
-		Landingpage lp =new Landingpage(driver);
-		lp.login();
-		Thread.sleep(2000);
-		log.info("login successfully");
+//		Landingpage lp =new Landingpage(driver);
+//		lp.login();
+//		Thread.sleep(2000);
+//		log.info("login successfully");
 		//WaitStattementLib.iWaitForSecs(driver, 20);
 		Policy pd = new Policy(driver);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click()", pd.Others());
-		log.info("click on Others tab");
-		js.executeScript("arguments[0].click()", pd.policy());
-		log.info("click on policy tab");
+//		js.executeScript("arguments[0].click()", pd.Others());
+//		log.info("click on Others tab");
+//		js.executeScript("arguments[0].click()", pd.policy());
+//		log.info("click on policy tab");
 		js.executeScript("window.scrollBy(0,1000)");
 		pd.pagination_2();
 		
 	}
-	@Test(priority=3,enabled=false)
+	@Test(priority=3,enabled=false,dependsOnMethods={"clickOnpagination_2"})
 	public void clickOnpagination_3() throws InterruptedException
 	{
-		Landingpage lp =new Landingpage(driver);
-		lp.login();
-		Thread.sleep(2000);
-		log.info("login successfully");
-//		//WaitStattementLib.iWaitForSecs(driver, 20);
+//		Landingpage lp =new Landingpage(driver);
+//		lp.login();
+//		Thread.sleep(2000);
+//		log.info("login successfully");
+//    WaitStattementLib.iWaitForSecs(driver, 20);
 		Policy pd = new Policy(driver);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click()", pd.Others());
-		log.info("click on Others tab");
-		js.executeScript("arguments[0].click()", pd.policy());
-		log.info("click on policy tab");
+//		js.executeScript("arguments[0].click()", pd.Others());
+//		log.info("click on Others tab");
+//		js.executeScript("arguments[0].click()", pd.policy());
+//		log.info("click on policy tab");
 		js.executeScript("window.scrollBy(0,1000)");
 		pd.pagination_3();
 		
