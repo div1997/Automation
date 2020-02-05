@@ -6,7 +6,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+//import org.openqa.selenium.support.ui.WebDriverWait;
+
+import resource.WaitStattementLib;
 
 public class DownloadCenter
 {
@@ -14,6 +19,7 @@ public class DownloadCenter
 	
 	public WebDriver driver;
 	
+	WaitStattementLib time;
 	
 	public DownloadCenter(WebDriver driver)
 	{
@@ -43,13 +49,6 @@ public class DownloadCenter
 		
 		driver.findElement(By.xpath("//tbody//tr["+i+"]//td[4]//i[1][@class='fas fa-pencil-alt icon-color']")).click();
 	
-
-		//	@FindBy(xpath="//tbody//tr["+i+"]//td[4]//i[1][@class='fas fa-pencil-alt icon-color']")
-//	WebElement editdoctypebutton;
-//	public WebElement editdoctypebutton()
-//	{
-//		return editdoctypebutton;
-//	}
 	}
 	@FindBy(xpath="//form//div//div//div[@class='row']//div//div//input[@id='formGroupExampleInput1']")
 	WebElement editdoctypename;
@@ -89,6 +88,7 @@ public class DownloadCenter
     WebElement searchFilename;
     @FindBy(xpath="//select[@class='form-control customSelectCss ng-untouched ng-pristine ng-valid']")
     WebElement showperpage;
+    
 	public WebElement project()
 	{
 		return project;
@@ -201,27 +201,38 @@ public class DownloadCenter
 		return deleteyes;
 	}
 
-		public WebElement showperpage() 
+	public WebElement showperpage() 
 		{
 			return showperpage;
 		}
+		
+	//Method creation	
+
 		public void addTypeDc(String type, String description) throws InterruptedException 
 		{
 			addtype_button1().click();
-			Thread.sleep(2000);
+		
+
+		String unuse = "//div[@class='pageload-spinner ng-scope']";
+
+		boolean l = WaitStattementLib.eWaittillinvisible(driver, 4, unuse);
+	
+			 if(l)
+			 {
 			add_button().click();
+			 }
 			doctypeName().sendKeys(type);
 			doctypedescription().sendKeys(description);
-		    Thread.sleep(2000);
+		    
 			save().click();
-			Thread.sleep(2000);
+			
 			close().click();
-			Thread.sleep(1000);	
+		
 		}
 		public void editTypeDc(int i,String type, String description) throws InterruptedException
 		{
 			addtype_button1().click();
-			//tbody//tr["+i+"]//td[4]//i[1][@class='fas fa-pencil-alt icon-color']
+			
 		
 			Thread.sleep(2000);
 			//dc.editdoctypebutton().click();

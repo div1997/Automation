@@ -35,7 +35,7 @@ public class Blogtestcase extends Baseclass {
 		Thread.sleep(2000);
 	 }
 	
-	@Test(priority=1,enabled = false)
+	@Test(priority=1,enabled = true)
 	public void blogfilter() throws InterruptedException
 	{
 		
@@ -53,7 +53,7 @@ public class Blogtestcase extends Baseclass {
 		log.info("applied filter on"+prop.getProperty("Status"));
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void writeblog() throws InterruptedException
 	{
 		
@@ -64,9 +64,20 @@ public class Blogtestcase extends Baseclass {
 	js.executeScript("arguments[0].click()", bp.viewblog());
 	log.info("Click on view blogs");
 	bp.writeblog().click();
-	Thread.sleep(2000);
+	log.info("click on write blog");
+//	Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)							
+//			.withTimeout(30, TimeUnit.SECONDS) 			
+//			.pollingEvery(5, TimeUnit.SECONDS) 			
+//			.ignoring(NoSuchElementException.class);
+//	WebElement blogtitle = wait.until(new Function<WebDriver, WebElement>(){
+//	
+//		public WebElement blogtitle (WebDriver driver ) {
+//			return driver.findElement(By.xpath("//input[@class='form-control ng-pristine ng-invalid ng-touched']"));
+//		});
+//	 
 	bp.blogtitle().sendKeys("sjxakjsdhcs");
 	
 		
-	}
+	
+}
 }

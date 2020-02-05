@@ -1,63 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="2" failed="1" total="3" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="90085" started-at="2019-11-09T10:10:13Z" finished-at="2019-11-09T10:11:43Z">
+  <suite name="Default suite" duration-ms="33091" started-at="2020-01-23T09:29:53Z" finished-at="2020-01-23T09:30:26Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="90085" started-at="2019-11-09T10:10:13Z" finished-at="2019-11-09T10:11:43Z">
-      <class name="OodlesDB.Blogtestcase">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:OodlesDB.Blogtestcase@59fd97a8]" name="initialize" is-config="true" duration-ms="37258" started-at="2019-11-09T15:40:13Z" finished-at="2019-11-09T15:40:51Z">
+    <test name="Default test" duration-ms="33091" started-at="2020-01-23T09:29:53Z" finished-at="2020-01-23T09:30:26Z">
+      <class name="OodlesDB.Downloadcentertestcase">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:OodlesDB.Downloadcentertestcase@4501b7af]" name="initialize" is-config="true" duration-ms="31051" started-at="2020-01-23T14:59:53Z" finished-at="2020-01-23T15:00:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="FAIL" signature="writeblog()[pri:0, instance:OodlesDB.Blogtestcase@59fd97a8]" name="writeblog" duration-ms="52803" started-at="2019-11-09T15:40:51Z" finished-at="2019-11-09T15:41:43Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method status="FAIL" signature="login(java.lang.String, java.lang.String)[pri:0, instance:OodlesDB.Downloadcentertestcase@4501b7af]" name="login" duration-ms="13" started-at="2020-01-23T15:00:26Z" data-provider="logingetTestdata" finished-at="2020-01-23T15:00:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[rijul.jain@oodlestechnologies.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[manish@159]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.IllegalArgumentException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//input[@class='form-control ng-pristine ng-invalid ng-touched']"}
-  (Session info: chrome=72.0.3626.96)
-  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Linux 4.4.0-166-generic x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.5', revision: 'd54ebd709a', time: '2018-11-06T11:42:16'
-System info: host: 'Divya.Varnwal', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-166-generic', java.version: '1.8.0_222'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: /tmp/.org.chromium.Chromium...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 72.0.3626.96, webStorageEnabled: true}
-Session ID: 8fae016f0a77c35c3c5f3ba6d871f956
-*** Element info: {Using=xpath, value=//input[@class='form-control ng-pristine ng-invalid ng-touched']}]]>
+              <![CDATA[argument type mismatch]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@class='form-control ng-pristine ng-invalid ng-touched']"}
-  (Session info: chrome=72.0.3626.96)
-  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Linux 4.4.0-166-generic x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.5', revision: 'd54ebd709a', time: '2018-11-06T11:42:16'
-System info: host: 'Divya.Varnwal', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-166-generic', java.version: '1.8.0_222'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: /tmp/.org.chromium.Chromium...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 72.0.3626.96, webStorageEnabled: true}
-Session ID: 8fae016f0a77c35c3c5f3ba6d871f956
-*** Element info: {Using=xpath, value=//input[@class='form-control ng-pristine ng-invalid ng-touched']}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy25.sendKeys(Unknown Source)
-	at OodlesDB.Blogtestcase.writeblog(Blogtestcase.java:68)
+              <![CDATA[java.lang.IllegalArgumentException: argument type mismatch
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -84,11 +56,19 @@ Session ID: 8fae016f0a77c35c3c5f3ba6d871f956
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- writeblog -->
-      </class> <!-- OodlesDB.Blogtestcase -->
+        </test-method> <!-- login -->
+        <test-method status="SKIP" signature="downloadpageNavigation()[pri:0, instance:OodlesDB.Downloadcentertestcase@4501b7af]" name="downloadpageNavigation" duration-ms="4" started-at="2020-01-23T15:00:26Z" depends-on-methods="OodlesDB.Downloadcentertestcase.login" finished-at="2020-01-23T15:00:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- downloadpageNavigation -->
+        <test-method status="SKIP" signature="addDocumentype_downloadcenter()[pri:0, instance:OodlesDB.Downloadcentertestcase@4501b7af]" name="addDocumentype_downloadcenter" duration-ms="0" started-at="2020-01-23T15:00:26Z" depends-on-methods="OodlesDB.Downloadcentertestcase.downloadpageNavigation" finished-at="2020-01-23T15:00:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addDocumentype_downloadcenter -->
+      </class> <!-- OodlesDB.Downloadcentertestcase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

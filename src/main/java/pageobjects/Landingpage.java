@@ -70,10 +70,12 @@ public class Landingpage {
 		
 	}
 	
-	public void login()
+	public void login(String username, String password)
 	{	
-		getEmail().sendKeys("rijul.jain@oodlestechnologies.com");
-		getpassword().sendKeys("manish@159");
+		System.out.println(username);
+		System.out.println(password);
+		getEmail().sendKeys(username);
+		getpassword().sendKeys(password);
         
         getlogin().click();
 

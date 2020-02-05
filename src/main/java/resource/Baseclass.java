@@ -46,7 +46,7 @@ public class Baseclass {
 		System.setProperty("webdriver.gecko.driver","//home//divya//Desktop//data//geckodriver");
 		driver = new FirefoxDriver();
 	}
-	//driver.manage().deleteAllCookies();
+	driver.manage().deleteAllCookies();
 	driver.manage().timeouts().implicitlyWait(50,TimeUnit.SECONDS);
 	driver.manage().window().maximize();
 				
