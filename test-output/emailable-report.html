@@ -31,14 +31,44 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi">0</td><td class="numi">15.2 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">2</td><td class="numi">17.1 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr><th colspan="4">Default test &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="1">Testcases.Signintestcase</td><td><a href="#m1"><b>signin</b>  </a></td><td class="numi">1</td><td>1593240733154</td><td class="numi">25</td></tr>
+<tr><th colspan="4">Default test &#8212; failed (configuration methods)</th></tr>
+<tr class="failedodd"><td rowspan="1">Testcases.HomepageTestcase</td><td><a href="#m1"><b>closeWindow</b>  </a></td><td class="numi">1</td><td>1593536672284</td><td class="numi">0</td></tr>
+<tr><th colspan="4">Default test &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="2">Testcases.HomepageTestcase</td><td><a href="#m2"><b>Veriyheader</b>  </a></td><td class="numi">1</td><td>1593536672255</td><td class="numi">22</td></tr><tr class="failedodd"><td><a href="#m3"><b>verifyfooter</b>  </a></td><td class="numi">1</td><td>1593536672279</td><td class="numi">3</td></tr>
 </table>
 <h1>Default test</h1>
-<h2 id="m1">Testcases.Signintestcase:signin</h2>
+<h2 id="m1">Testcases.HomepageTestcase:closeWindow</h2>
+<div style="padding-left:3em">
+<p>null</p>
+Resource.Baseclass.closewindow(Baseclass.java:55)
+<br/>at Testcases.HomepageTestcase.closeWindow(HomepageTestcase.java:54)
+<br/>23 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">Testcases.HomepageTestcase:Veriyheader</h2>
+<div style="padding-left:3em">
+<p>null</p>
+org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+<br/>at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+<br/>at com.sun.proxy.$Proxy12.isDisplayed(Unknown Source)
+<br/>at Pageobject.Homepage.verifytitleimage(Homepage.java:46)
+<br/>at Testcases.HomepageTestcase.Veriyheader(HomepageTestcase.java:30)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m3">Testcases.HomepageTestcase:verifyfooter</h2>
+<div style="padding-left:3em">
+<p>null</p>
+org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+<br/>at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+<br/>at com.sun.proxy.$Proxy12.isDisplayed(Unknown Source)
+<br/>at Pageobject.Homepage.verifynewsletter(Homepage.java:136)
+<br/>at Testcases.HomepageTestcase.verifyfooter(HomepageTestcase.java:42)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

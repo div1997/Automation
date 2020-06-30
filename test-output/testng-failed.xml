@@ -3,12 +3,14 @@
 <suite parallel="none" name="Failed suite [Default suite]">
   <test parallel="none" name="Default test(failed)">
     <classes>
-      <class name="Testcases.Signintestcase">
+      <class name="Testcases.HomepageTestcase">
         <methods>
-          <include name="signin"/>
-          <include name="lanuch"/>
+          <include name="Veriyheader"/>
+          <include name="verifyfooter"/>
+          <include name="closeWindow"/>
+          <include name="launchbrowser"/>
         </methods>
-      </class> <!-- Testcases.Signintestcase -->
+      </class> <!-- Testcases.HomepageTestcase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
