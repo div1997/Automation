@@ -21,9 +21,9 @@ public class Homepage
 	 }
 	
 	// Verifying header element
-	@FindBy(className="img[class='img-responsive']" )
+	@FindBy(className="[class='img-responsive']" )
 	WebElement titleimage;
-	@FindBy(xpath="span[@class='shop-phone']")
+	@FindBy(xpath="*[@id='header']/div[2]/div/div/nav/span")
 	WebElement callusnow;
 	@FindBy(xpath="a[contains(@title,'Contact Us')]")
 	WebElement contactus;
