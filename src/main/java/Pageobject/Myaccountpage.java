@@ -18,25 +18,25 @@ public class Myaccountpage
  }
  
 
-	@FindBy(xpath="button[@id='submit_search']")
+	@FindBy(xpath="//button[@id='submit_search']")
 	WebElement search;
-	@FindBy(xpath="a[@vales='View my shopping cart']")
+	@FindBy(xpath="//a[@vales='View my shopping cart']")
 	WebElement cart;
-	@FindBy (xpath="a[contains(@title,'Women')]")
+	@FindBy (xpath="//a[contains(@title,'Women')]")
 	WebElement womentab;
-	@FindBy(xpath="a[contains(@title,'Dresses')]")
+	@FindBy(xpath="//a[contains(@title,'Dresses')]")
 	WebElement dressestab;
-	@FindBy(xpath="a[contains(@title,'T-shirts')]")
+	@FindBy(xpath="//a[contains(@title,'T-shirts')]")
 	WebElement tshirtstab;
-	@FindBy(xpath="a[contains(@title, 'Orders')]")
+	@FindBy(xpath="//a[contains(@title, 'Orders')]")
 	WebElement order_history;
-	@FindBy(xpath="a[@title='Credit slips']")
+	@FindBy(xpath="//a[@title='Credit slips']")
 	WebElement mycreditslip;
-	@FindBy (xpath="a[@title='Addresses']")
+	@FindBy (xpath="//a[@title='Addresses']")
 	WebElement myaddress;
-	@FindBy(xpath="a[@title='Information']")
+	@FindBy(xpath="//a[@title='Information']")
 	WebElement mypersonalinfo;
-	@FindBy (xpath="a[@title='My wishlists']")
+	@FindBy (xpath="//a[@title='My wishlists']")
 	WebElement mywishlist;
 	
 	

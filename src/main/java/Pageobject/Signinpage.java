@@ -7,108 +7,96 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Signinpage 
+public class Signinpage
 
 {
 	public WebDriver driver;
-	public Signinpage( WebDriver driver)
-	{
-		this.driver= driver;
+
+	public Signinpage(WebDriver driver) {
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath= "a[cotians((text(),'Sign in')]")                 
+	@FindBy(xpath = "//a[@class='login']")
 	WebElement sign;
-	@FindBy(id="email_create")
+	@FindBy(xpath = "//input[@id='email_create']")
 	WebElement email;
-	@FindBy(id="SubmitCreate")
+	@FindBy(xpath = "//button[@id='SubmitCreate']")
 	WebElement create_email;
-	@FindBy(id="create_account_error")
+	@FindBy(xpath = "//button[@id='create_account_error']")
 	WebElement alert_on_balnk;
-	@FindBy(xpath="div[@id='uniform-id_gender1']")
+	@FindBy(xpath = "//div[@id='uniform-id_gender1']")
 	WebElement mr;
-	@FindBy (xpath="div[@id='uniform-id_gender2']")
+	@FindBy(xpath = "//div[@id='uniform-id_gender2']")
 	WebElement mrs;
-	@FindBy(xpath="input[@id='customer_firstname']")
+	@FindBy(xpath = "//input[@id='customer_firstname']")
 	WebElement First_name;
-	@FindBy(xpath="input[@id='customer_lastname']")
+	@FindBy(xpath = "//input[@id='customer_lastname']")
 	WebElement Last_name;
-	@FindBy(xpath="input[@value='diya123@yahoo.com']")
+	@FindBy(xpath = "//input[@value='diya123@yahoo.com']")
 	WebElement auto_fill_email;
-	@FindBy(xpath="input[@id='passwd']")
+	@FindBy(xpath = "//input[@id='passwd']")
 	WebElement password;
-	@FindBy(xpath="select[@id='days']")
+	@FindBy(xpath = "//select[@id='days']")
 	WebElement days;
-	@FindBy(xpath="select[@id='months']")
+	@FindBy(xpath = "//select[@id='months']")
 	WebElement month;
-	@FindBy(xpath="select[@id='uniform-years']")
+	@FindBy(xpath = "//select[@id='uniform-years']")
 	WebElement years;
-	@FindBy(xpath="div[@id='uniform-optin']")
+	@FindBy(xpath = "div[@id='uniform-optin']")
 	WebElement specail_offer;
-	@FindBy(xpath="div[@id='uniform-newsletter")
+	@FindBy(xpath = "//div[@id='uniform-newsletter")
 	WebElement news_letter;
-	@FindBy(xpath="input[@id='firstname']")
+	@FindBy(xpath = "//input[@id='firstname']")
 	WebElement autofill_fistname;
-	@FindBy(xpath="@input=@id='lastname']")
+	@FindBy(xpath = "//input[@id='lastname']")
 	WebElement autofill_lastname;
-	@FindBy(xpath="input[@id='company']")
+	@FindBy(xpath = "//input[@id='company']")
 	WebElement company;
-	@FindBy(xpath="input[@id='address1']")
+	@FindBy(xpath = "//input[@id='address1']")
 	WebElement address1;
-	@FindBy(xpath="input[@id='address2']")
+	@FindBy(xpath = "//input[@id='address2']")
 	WebElement address2;
-	@FindBy(xpath="input[@id='city']")
-			WebElement city;
-	@FindBy(xpath="select[@id='id_state']")
+	@FindBy(xpath = "//input[@id='city']")
+	WebElement city;
+	@FindBy(xpath = "//select[@id='id_state']")
 	WebElement state;
-	@FindBy(xpath="input[@id='postcode']")
+	@FindBy(xpath = "//input[@id='postcode']")
 	WebElement pincode;
-	@FindBy (xpath="select[@id='id_country']")
+	@FindBy(xpath = "select[@id='id_country']")
 	WebElement country;
-	@FindBy(xpath="textarea[@id='other']")
+	@FindBy(xpath = "//textarea[@id='other']")
 	WebElement additionalinfo;
-	@FindBy(xpath="input[@id='phone']")
+	@FindBy(xpath = "input[@id='phone']")
 	WebElement phone;
-	@FindBy(xpath="input[@id='phone_mobile']")
+	@FindBy(xpath = "//input[@id='phone_mobile']")
 	WebElement mobile_phone;
-	@FindBy(xpath="input[@id='alias']")
+	@FindBy(xpath = "//input[@id='alias']")
 	WebElement alias;
-	@FindBy (xpath="button[@id='submitAccount']")
+	@FindBy(xpath = "//button[@id='submitAccount']")
 	WebElement ragister;
-	@FindBy (xpath="h1[@id='page-heading']")
+	@FindBy(xpath = "//h1[@id='page-heading']")
 	WebElement myaccount_lable;
-	public WebElement signin() 
+
+	public WebElement signin()
 	{
 		return sign;
 	}
-	// create email page
-	public void signin_negative()
+	
+	
+	
+	public String verify_register_user()
 	{
-		sign.click();
-		create_email.click();
-		Alert al = driver.switchTo().alert();
-		al.getText();
-		al.dismiss();
-		
+		 String create_account_page = driver.findElement(By.className("page-subheading")).getText();
+		 return create_account_page;
+	       
 	}
 	
-	// redirect to sign in page and register user
+	public void register_step_1( String email)
 	
-	public void signin_positive(String email, String title, String firstname, 
-	String lastname,String pawword, String days, String month, String year, String company,
-	String checkbox, String address1, String address2, String city, String pincode, String state,
-	String  country, String additionalinfo, String phone_number, String mobile_number,String alias )
 	{
-		
-		
-		
-		
+		System.out.println("enter email");
+	     email.	
+	 
 	}
-	
-	
-	
-	
-	
-
 }
-

@@ -13,48 +13,40 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Baseclass {
-	
-	
+public class Baseclass 
+{
+
 	public WebDriver driver;
-	
-	
-	 public void launchBrowser(String browser_name)
-	 {
-		if ( browser_name.equalsIgnoreCase("chrome"))
+
+	public void launchBrowser(String browser_name) 
+	{
+		if (browser_name.equalsIgnoreCase("chrome")) 
 		{
 			WebDriverManager.chromedriver().setup();
-			driver= new ChromeDriver();
+			driver = new ChromeDriver();
 			driver.get("http://automationpractice.com/index.php");
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		}
-		else
+		} 
+		else 
 		{
 			WebDriverManager.firefoxdriver().setup();
-			driver = new  FirefoxDriver();
+			driver = new FirefoxDriver();
 			driver.get("http://automationpractice.com/index.php");
+
 		}
+
+	}
+
+	public String screenshot(String Testcasename, WebDriver driver) throws IOException 
+	{
 		
-			
-	 }
-	 
-	 
-	 public String screenshot(String Testcasename, WebDriver driver) throws IOException  
-	 {
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
-		String destinationfile = System.getProperty("user.dir")+"\\reports\\"+Testcasename+".png";
-		FileUtils.copyFile(source,new File(destinationfile));
-		 return destinationfile;
-	 }
-
-	public void closewindow() 
-	{
-		// TODO Auto-generated method stub
-        driver.quit();
+		String destinationfile = System.getProperty("user.dir") + "\\reports\\" + Testcasename + ".png";
+		FileUtils.copyFile(source, new File(destinationfile));
+		return destinationfile;
 	}
-	
-	
 
+	
 }
