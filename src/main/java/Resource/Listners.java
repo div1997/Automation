@@ -1,4 +1,4 @@
-package Testcases;
+package Resource;
 
 import java.io.IOException;
 
@@ -10,9 +10,6 @@ import org.testng.ITestResult;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-
-import Resource.Baseclass;
-import Resource.ExtentReport;
 
 public class Listners extends Baseclass implements ITestListener
 {
